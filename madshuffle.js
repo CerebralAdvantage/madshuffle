@@ -70,6 +70,8 @@ start = Date.now();
 init_deck(10000);
 finish = Date.now();
 
+if (false) // let's skip testing!
+{ 
 let x = [];
 let bad = false;
 
@@ -87,7 +89,7 @@ for (i=0;i<10000;i+=100)
 	{
 		if(x[j] != j) bad = true;
 	}
-	//console.log("mod 100 test for cell ", i/100, " is ", bad==false);
+	console.log("mod 100 test for cell ", i/100, " is ", bad==false);
 }
 
 for (i=0;i<10000;i+=1000)
@@ -104,41 +106,23 @@ for (i=0;i<10000;i+=1000)
 	{
 		if(x[j] != j) bad = true;
 	}
-	//console.log("mod 1000 test for cell ", i/1000, " is ", bad==false);
+	console.log("mod 1000 test for cell ", i/1000, " is ", bad==false);
 }
 
-for (i=0;i<10000;i+=1000)
+for(j=0;j<10000;j++)
+	x[j] = 0;
+for(j=0;j<10000;j++)
 {
-	for(j=0;j<1000;j++)
-		x[j] = 0;
-	for(j=0;j<1000;j++)
-	{
-		x[deck[j+i] % 1000] = deck[j+i] % 1000;
-	}
-	// now test
-	bad = false;
-	for(j=0;j<1000;j++)
-	{
-		if(x[j] != j) bad = true;
-	}
-	//console.log("mod 1000 test for cell ", i/1000, " is ", bad==false);
+	x[deck[j]] = deck[j];
 }
-
-
-	for(j=0;j<10000;j++)
-		x[j] = 0;
-	for(j=0;j<10000;j++)
-	{
-		x[deck[j]] = deck[j];
-	}
-	// now test
-	bad = false;
-	for(j=0;j<10000;j++)
-	{
-		if(x[j] != j) bad = true;
-	}
-	//console.log("mod 10000 test is ", bad==false);
-
+// now test
+bad = false;
+for(j=0;j<10000;j++)
+{
+	if(x[j] != j) bad = true;
+}
+console.log("mod 10000 test is ", bad==false);
+} // testing section
 
 //console.log("Time spent = ", finish-start, " milliseconds.");
 let line = "";
