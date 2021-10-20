@@ -5,19 +5,18 @@ regarding which numbers were allowed to be in which "parts".  The constraints re
 yet special mix.  (Expect the usual "I saw two sevens together!" kind of comments.)  Here is what you get
 with these numbers:
 
-Each consecutive group of 100 numbers, if divided by 100, produces the values 0-99, with no repeats
-and no omissions.  Also, the numbers 0-99 are in a very random order.  You can actually pick up on
-this if you try to focus on the last two digits of the numbers in the first batch of 100.  You might
-notice 62 or 77.  try to find another occurance of a given 2-digit "ending" in the entire first paragraph.
-You can't.
+Each consecutive group of 100 numbers, if divided by 100, produces the remainder values 0-99, with no
+repeats and no omissions.  Also, the numbers 0-99 are in a very random order.  You can see this
+if you try to focus on the last two digits of the numbers in the first batch of 100.  You might
+notice 62 or 77.  try to find another occurance of a given 2-digit "ending" in the entire first
+paragraph. You can't.
 
 Each consecutive group of 1000 numbers (10 of the "paragraphs", grouped together) , "modded" by 1000,
 will give you 0-999.  No repeats.  No omissions.  Random looking order.
 
 Taken as a whole, all 100 paragraphs form a set of 10,000 numbers.  These numbers do not repeat.
 They cover the values 0-9999.  There are no omissions.  And, outside of "card-counting" techniques,
-I challenge anyone to discover a non-random predictable pattern.  In any grouping or subset.  Enjoy
-the numbers.  Enjoy the code that produced them.  Enjoy being a child of nature in the universe.
+I challenge anyone to discover a non-random predictable pattern.  In any grouping or subset.
 
 3688 5618 5154 4863 6243 5926 5127 2984 3104 1185 6590 5839 5159 2730 7156 4593 7712 9095 3400  182 
 6622 3041 9215 9755  208 7847 3925 7678 8142 8580 8672 2083 5476 5457  973 2936 6009 4207 5886 6574 
