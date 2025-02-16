@@ -1,6 +1,6 @@
 ```
 While you're here, do a text search for something like "5 " (include the space).
-Notice how each line has a number that ends in 5. If you search of "05 " you'll
+Notice how each line has a number that ends in 5. If you search for "05 " you'll
 see that each big paragraph has a single number ending in 05. Except for line 77,
 which has the number 5 (not 05). There's only one 5 in the entire list.
 All of the numbers in the list, 0-9999 are unique and quite random.
