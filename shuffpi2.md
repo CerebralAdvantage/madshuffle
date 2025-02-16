@@ -1,4 +1,11 @@
-3894 5160  363 6441 1526 7205 3978 2047 2222  299 
+```
+While you're here, do a text search for something like "5 " (include the space).
+Notice how each line has a number that ends in 5. If you search of "05 " you'll
+see that each big paragraph has a single number ending in 05. Except for line 72,
+which has the number 5 (not 05). There's only one 5 in the entire list.
+All of the numbers in the list, 0-9999 are unique and quite random.
+
+3894 5160 3630 6441 1526 7205 3978 2047 2222  299 
 8649  450 2706 8717 3918  984 5811 9862 3013 9785 
 4332 8388 2961   24 3036 1923 3087 3479 7020 2655 
 7557 8054 6452 1468 1400 4176 4475 7429 8281  943 
@@ -1097,3 +1104,4 @@
 9597  361 5739 7304 8262 4978 5195 3970 9606 3903 
 6749 6056 3091 8765 1017 4750 6813 9392 4968  474 
 7258 3389   53 6226 3545  482 3921  434 2920 6667 
+```
