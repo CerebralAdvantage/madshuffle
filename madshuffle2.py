@@ -3,7 +3,7 @@ import random
 r=[0,1,2,3,4,5,6,7,8,9]
 deck = list(range(10000))
 
-# first, shuffle the 10 different thousands digits
+# isolate and swap random pairs of 1000's digits
 for _ in range(20000):
   [a,b] = random.choices(r,k=2)
   c=random.randint(0,999)
@@ -11,7 +11,7 @@ for _ in range(20000):
   b = b * 1000 + c
   deck[a], deck[b] = deck[b], deck[a]
 
-# next, shuffle 100's within a given cell of 1000
+# isolate and swap random pairs of 100's digits
 for _ in range(20000):
   [a,b] = random.choices(r,k=2)
   z=random.randint(0,9) * 1000   # first, pick a cell of 1000 (0,1000,2000, etc)
@@ -20,7 +20,7 @@ for _ in range(20000):
   b = z + (b * 100) + c  # and          9704
   deck[a], deck[b] = deck[b], deck[a]
 
-# new! shuffle 10's within a given cell of 100
+# isolate and swap random pairs of 10's digits
 for _ in range(20000):
   [a,b] = random.choices(r,k=2)
   z=random.randint(0,9)  # first, pick the last digit
@@ -29,11 +29,12 @@ for _ in range(20000):
   b = c*100 + b*10 + z  # and          7207
   deck[a], deck[b] = deck[b], deck[a]
 
-# finally, shuffle each cell of 10
+# finally, triple shuffle (Fisher-Yates) each group of 10
 for i in range(0, 10000, 10):
-  for j in range(9, -1, -1):
-    a = random.randint(0,j)
-    deck[a+i], deck[j+i] = deck[j+i], deck[a+i]
+  for t in range(3):
+    for j in range(9, -1, -1):
+      a = random.randint(0,j)
+      deck[a+i], deck[j+i] = deck[j+i], deck[a+i]
 
 #showoff
 for j in range(0,10000,100):
